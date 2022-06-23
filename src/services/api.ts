@@ -1,12 +1,4 @@
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  imageURL: string;
-  imageAlt: string;
-  imageCredit: string;
-}
+import { Product } from "../models/product.model";
 
 export async function getProducts(): Promise<Product[]> {
   const results = await fetch("/products.json");
